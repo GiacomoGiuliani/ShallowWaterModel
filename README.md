@@ -11,13 +11,14 @@
 **Dimensions (SI units):** Implied via values of constants. For instance, Lx is the width of the domain in meters (m), but the code is not specifically dependent on any units. If all input values are appropriately scaled, other units may be used.
 
 ### Equations:
+$$
 \begin{align*}
 \frac{\partial u}{\partial t} - fv &= - g \frac{\partial h}{\partial x} + F \quad \text{(1)} \\
 \frac{\partial v}{\partial t} + fu &= - g \frac{\partial h}{\partial y} + F \quad \text{(2)} \\
-\frac{\partial h}{\partial t} + H\left(\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}\right) &= F \phantom{\frac{\partial h}{\partial t} + h} \quad \text{(3)} \\
-\eta &= H + h \phantom{\frac{\partial h}{\partial t} } \quad \text{(4)}
+\frac{\partial h}{\partial t} + H\left(\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y}\right) &= F  \ \ \ \ \ \ \ \ \ \ \ \ \ \qquad \text{(3)} \\
+\eta &= H + h \ \ \ \ \  \qquad \text{(4)}
 \end{align*}
-
+$$
 - Here, F is a forcing term, with the default value F = (0, 0, 0).
 
 ## Usage:
@@ -57,7 +58,7 @@ A list of the possible already implemented cases is provided:
 - Equatorially trapped waves - large disturbance (``` "Equatorially-trapped Waves (l)" ```)
 - Equatorially trapped waves - all walls (``` "Equatorially-trapped Waves (a)" ```)
 ​
-<br>
+
 ​
 However, it is possible to create your custom-made case (``` "Custom-Made case" ```). For this, you can modify any parameter and those that remain unchanged will 
 take the corresponding values from the default simulation, namely the (``` "Non-Rotational Waves" ```). Here, I provide a brief snippet for this case:
