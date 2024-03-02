@@ -27,7 +27,8 @@ The code provides flexibility for multiple cases. Below is a template to initial
 
 ```python
 # Example Usage
-%run ShallowWaterModel.ipynb
+%run ShallowWaterModel.ipynb # If you are using the Jupyter Notebook version
+import ShallowWaterModel # If you are using the .py version (Make sure the module is in the same directory of your script)
 
 # Initialize the model with the desired case
 case = "Your Desired Case"
@@ -64,8 +65,9 @@ However, it is possible to create your custom-made case (``` "Custom-Made case" 
 take the corresponding values from the default simulation, namely the (``` "Non-Rotational Waves" ```). Here, I provide a brief snippet for this case:
 
 ```python
-# Example
-%run ShallowWaterModel.ipynb
+# Example Usage
+%run ShallowWaterModel.ipynb # If you are using the Jupyter Notebook version
+import ShallowWaterModel # If you are using the .py version (Make sure the module is in the same directory of your script)
 ​
 # I want to simulate a shallow-water environment in a rectangular domain with reflecting boundaries
 model = ShallowWaterModel("Custom-Made case", Lx=2.0e7, Ly=1.0e7, boundary_condition='allwalls')
